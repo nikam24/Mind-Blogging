@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const bodyParser = require('body-parser');
+const PORT = process.env.PORT || 5000;
 
 const corsOptions = {
   origin: "http://localhost:3001",
@@ -34,7 +35,7 @@ app.delete("/", (req, res) => {
   res.send({});
 });
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
   console.log("Server is running on port 5000");
 });
 
